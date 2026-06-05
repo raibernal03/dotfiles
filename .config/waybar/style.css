@@ -1,0 +1,122 @@
+@import '../../.cache/wal/colors-waybar.css';
+
+@define-color background @background;
+@define-color network @color1;
+@define-color sound @color2;
+@define-color battery @color4;
+@define-color clock @color9;
+@define-color lock @color12;
+@define-color power @color11;
+
+@define-color workspace @color13;
+@define-color workspace2 @color14;
+@define-color hover @foreground;
+
+
+* {
+  font-family: "FantasqueSansMono Nerd Font";
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background-color: rgba(26, 26, 26, 0.5); /* Semi-transparent */
+  border: none;
+  
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 2px;
+  background-color: @background;
+  margin-left: 1rem;
+}
+
+#network {
+  background-color: @background;
+  color: @network;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+#workspaces button {
+  color: @workspace ;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @workspace2 ;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @hover;
+  border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power{
+  background-color: @background;
+  padding: 0.5rem 1rem;
+  margin: 2px 0;
+}
+
+#clock {
+  color: @clock;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @battery;
+}
+
+#battery.charging {
+  color: @battery;
+}
+
+#battery.warning:not(.charging ){
+  color: @battery;
+}
+
+#backlight {
+  color: @color6;
+}
+
+#backlight, #battery {
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: @audio;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: @color1; /* havent chosen the color */
+  border-radius: 1rem;
+}
+
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lock;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @power;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
